@@ -19,16 +19,14 @@
     ],
     "rules": {
         "prettier/prettier": ["error", { "endOfLine":"auto" }],
+
         "arrow-parens": "off",
         "import/no-unresolved": "off",
         "no-console": "error",
         "comma-dangle": "off",
         "indent": "off",
         "linebreak-style": "off",
-        "quotes": [
-            "error",
-            "single"
-        ],
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
         "semi": [
             "error",
             "always"
@@ -37,7 +35,8 @@
         "react/function-component-definition": [
             2,
             {
-                "namedComponents": "arrow-function"
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
             }
         ],
         "no-param-reassign": "off",
