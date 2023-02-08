@@ -1,4 +1,4 @@
-import PageNav from 'Entities/PageNav';
+import PageNav from 'Features/PageNav';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'Shared/ui/Contianer';
