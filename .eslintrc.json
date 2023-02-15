@@ -19,7 +19,7 @@
     ],
     "rules": {
         "prettier/prettier": ["error", { "endOfLine":"auto" }],
-
+        "import/prefer-default-export": "off",
         "arrow-parens": "off",
         "import/no-unresolved": "off",
         "no-console": "error",
