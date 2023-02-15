@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchGenres } from 'Shared/api/tmdb';
-import Context from 'Shared/model';
+import { Context } from 'Shared/model';
 
 const withContext = (component) => () => {
 	const [genres, setGenres] = useState([]);

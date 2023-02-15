@@ -1,11 +1,9 @@
-import { Space } from 'antd';
-import Typography from 'antd/es/typography/Typography';
+import { Space, Typography } from 'antd';
+import formatDate from 'Entities/Movie/lib/formatDate';
 import React, { useMemo } from 'react';
-import formatDate from '../lib/formatDate';
 import './index.scss';
 
 const { Title, Text } = Typography;
-
 const MovieCard = ({ header, imageUrl, rawRealiseDate, genres, actions }) => {
 	const formattedDate = useMemo(
 		() => formatDate(rawRealiseDate),
@@ -14,17 +12,21 @@ const MovieCard = ({ header, imageUrl, rawRealiseDate, genres, actions }) => {
 	return (
 		<div className='movie-card'>
 			<div className='movie-card__left'>
-				<img src={imageUrl} alt='' />
+				<div className='movie-card__image-contaner'>
+					<img className='movie-card__image' src={imageUrl} alt='' />
+				</div>
 			</div>
 			<section className='movie-card__right'>
 				<header className='movie-card__header'>
-					<Title level={3}>{header}</Title>
+					<Title level={3} className='movie-card__title'>
+						{header}
+					</Title>
 				</header>
 				<main className='movie-card__main'>
 					<div className='movie-card__external-info'>
 						<Text type='secondary'>{formattedDate}</Text>
 						{genres && (
-							<Space>
+							<Space className='movie-card__genres'>
 								{genres.map((elem) => (
 									<div
 										className='movie-card__genre'
@@ -44,4 +46,5 @@ const MovieCard = ({ header, imageUrl, rawRealiseDate, genres, actions }) => {
 		</div>
 	);
 };
+
 export default MovieCard;

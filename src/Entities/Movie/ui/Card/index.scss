@@ -1,0 +1,52 @@
+.movie-card {
+	font-size: 20px;
+	display: flex;
+	box-shadow: 3px 5px 8px rgba(0, 0, 0, .1);
+	width: 100%;
+	gap: .3em;
+
+	&__left {
+		flex: 1 1 40%;
+	}
+
+	&__right {
+		flex: 1 1 60%;
+		padding: .5em;
+		padding-left: 0;
+	}
+
+	&__header {
+		font-size: 22px;
+	}
+
+	&__title {
+		font-size: 1em !important;
+	}
+
+	&__image-contaner {
+		object-fit: contain;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		aspect-ratio: 2 / 3;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__genres {
+		flex-wrap: wrap;
+	}
+
+	&__external-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 8px;
+	}
+
+}

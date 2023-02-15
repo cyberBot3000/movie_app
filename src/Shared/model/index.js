@@ -1,3 +1,4 @@
 import Context from './appContext';
+import useFetching from './useFetching';
 
-export default Context;
+export { Context, useFetching };

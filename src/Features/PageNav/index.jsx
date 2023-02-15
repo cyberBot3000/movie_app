@@ -1,3 +1,2 @@
-import PageNav from './ui';
-
-export default PageNav;
+export * from './ui';
+export * from './model';
