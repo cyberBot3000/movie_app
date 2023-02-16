@@ -14,10 +14,11 @@ export const fetchGenres = async () => {
 	return response;
 };
 
-export const fetchTrendingMovies = async () => {
+export const fetchTrendingMovies = async (page) => {
 	const response = await axios.get(`${TMDB_API_URL}/trending/movie/week`, {
 		params: {
 			api_key: TMDB_API_KEY,
+			page,
 		},
 	});
 	return response;

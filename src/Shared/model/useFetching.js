@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const useFetching = (fetchCb) => {
-	const [isLoading, setIsloading] = useState(false);
+	const [isLoading, setIsloading] = useState(true);
 	const [errMessage, setErrMessage] = useState('');
 	const fetching = async () => {
 		try {

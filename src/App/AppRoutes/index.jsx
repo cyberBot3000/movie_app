@@ -1,4 +1,4 @@
-import Home from 'Pages/Home';
+import { Home } from 'Pages/Home';
 import Login from 'Pages/Login';
 import React from 'react';
 import { Route, Routes } from 'react-router';

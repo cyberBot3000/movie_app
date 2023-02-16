@@ -16,6 +16,7 @@ const MoviesList = ({ movies }) => {
 						movie.genre_ids.includes(genre.id)
 					)}
 					rawRealiseDate={movie.release_date}
+					key={movie.id}
 				/>
 			))}
 		</div>
