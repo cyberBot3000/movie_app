@@ -1,8 +1,8 @@
 import { PageNav } from 'Features/PageNav';
 import { usePageNav } from 'Features/PageNav/model/usePageNav';
 import React from 'react';
-import Container from 'Shared/ui/Container';
-import Logo from 'Shared/ui/Logo/Logo';
+import { Container, Logo } from 'Shared/ui';
+
 import { items } from '../const';
 import './index.scss';
 

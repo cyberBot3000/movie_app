@@ -1,10 +1,11 @@
 import { Pagination, Spin, Typography } from 'antd';
-import Container from 'Shared/ui/Container';
+
 import React from 'react';
 import { useSitePagination } from 'Features/Pagination';
 import { MoviesList, useTrendingMovies } from 'Entities/Movie';
 
 import './index.scss';
+import { Container } from 'Shared/ui';
 
 export const Home = () => {
 	const { currentPage, pageChangeHandler } = useSitePagination();
