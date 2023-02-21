@@ -5,10 +5,12 @@ import './index.scss';
 
 const { Title, Text } = Typography;
 const MovieCard = ({ header, imageUrl, rawRealiseDate, genres, actions }) => {
-	const formattedDate = useMemo(
-		() => formatDate(rawRealiseDate),
-		[rawRealiseDate]
-	);
+	const formattedDate = useMemo(() => {
+		if (rawRealiseDate === '') {
+			return '';
+		}
+		return formatDate(rawRealiseDate);
+	}, [rawRealiseDate]);
 	return (
 		<div className='movie-card'>
 			<div className='movie-card__left'>
