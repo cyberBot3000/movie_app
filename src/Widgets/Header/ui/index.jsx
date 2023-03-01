@@ -7,7 +7,7 @@ import { items } from '../const';
 import './index.scss';
 
 const Header = () => {
-	const { current, changeSelectedItem } = usePageNav(items[0].key);
+	const { current, changeSelectedItem } = usePageNav();
 	return (
 		<div className='header'>
 			<Container className='header__container'>

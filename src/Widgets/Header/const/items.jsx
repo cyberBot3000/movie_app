@@ -1,13 +1,27 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 export const items = [
 	{
-		label: <Link to='/'>Home</Link>,
-		key: 'home',
+		label: (
+			<NavLink
+				to='/'
+				className={({ isActive }) => (isActive ? 'navlink-active' : '')}
+			>
+				Home
+			</NavLink>
+		),
+		key: '/',
 	},
 	{
-		label: <Link to='/search'>Search</Link>,
-		key: 'search',
+		label: (
+			<NavLink
+				to='/search'
+				className={({ isActive }) => (isActive ? 'navlink-active' : '')}
+			>
+				Search
+			</NavLink>
+		),
+		key: '/search',
 	},
 ];
