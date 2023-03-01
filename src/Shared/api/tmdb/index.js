@@ -26,3 +26,15 @@ export const fetchTrendingMovies = async (page) => {
 
 export const getFullImagePath = (imageName, width = 200) =>
 	`${TMDB_IMAGES_URL}/w${width}/${imageName}`;
+
+export const fetchSearchMovies = async (keyword, page) => {
+	const response = await axios.get(`${TMDB_API_URL}/search/movie`, {
+		params: {
+			api_key: TMDB_API_KEY,
+			query: keyword,
+			include_adult: false,
+			page,
+		},
+	});
+	return response;
+};

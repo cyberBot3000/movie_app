@@ -7,7 +7,7 @@ export const items = [
 		key: 'home',
 	},
 	{
-		label: <Link to='/login'>Login</Link>,
-		key: 'login',
+		label: <Link to='/search'>Search</Link>,
+		key: 'search',
 	},
 ];

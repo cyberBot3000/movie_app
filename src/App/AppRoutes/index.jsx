@@ -1,12 +1,13 @@
 import { Home } from 'Pages/Home';
-import Login from 'Pages/Login';
+import { SearchPage } from 'Pages/Search';
+
 import React from 'react';
 import { Route, Routes } from 'react-router';
 
 const AppRoutes = () => (
 	<Routes>
 		<Route element={<Home />} path='/' />
-		<Route element={<Login />} path='/login' />
+		<Route element={<SearchPage />} path='/search' />
 	</Routes>
 );
 
