@@ -11,7 +11,7 @@ export const ListPagination = ({
 	mode = 'both',
 }) => (
 	<div className={classes.pagination}>
-		{(mode === 'both' || mode === 'top') && (
+		{total > 1 && (mode === 'both' || mode === 'top') && (
 			<Pagination
 				total={total}
 				current={current}
@@ -21,7 +21,7 @@ export const ListPagination = ({
 			/>
 		)}
 		{children}
-		{(mode === 'both' || mode === 'bottom') && (
+		{total > 1 && (mode === 'both' || mode === 'bottom') && (
 			<Pagination
 				total={total}
 				current={current}
