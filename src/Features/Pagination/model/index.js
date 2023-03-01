@@ -1,1 +1,1 @@
-export * from './useSitePagination';
+export * from './useListPagination';
