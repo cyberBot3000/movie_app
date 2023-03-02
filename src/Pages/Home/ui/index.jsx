@@ -25,7 +25,8 @@ export const Home = () => {
 						{!isLoading && (
 							<ListPagination
 								current={currentPage}
-								total={allTrendingMovies.total_pages}
+								total={allTrendingMovies.total_results}
+								totalPages={allTrendingMovies.total_pages}
 								onChange={pageChangeHandler}
 								pageSize={20}
 							>
